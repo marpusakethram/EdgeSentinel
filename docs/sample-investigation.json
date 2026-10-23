@@ -1,0 +1,202 @@
+{
+  "mode": "deterministic-read-only",
+  "summary": {
+    "text": "No check-in arrived for more than 6 seconds, counting from the last heartbeat or when the app started.",
+    "citations": [
+      "alert:4"
+    ]
+  },
+  "evidence_claims": [
+    {
+      "text": "cooling-03 reported a check-in. Its message listed 45.0 C and vibration of 1.0 mm/s. It said the sender was 192.0.2.10. Details: simulated normal operation",
+      "citations": [
+        "event:29"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "text": "Check whether the demo is running. Then look at the last check-in and the server messages. Silence alone does not tell us the cause.",
+      "citations": [
+        "alert:4"
+      ]
+    },
+    {
+      "text": "1. Check whether the simulator is running and whether the offline scenario is selected.",
+      "citations": [
+        "runbooks/device-offline.md"
+      ]
+    },
+    {
+      "text": "2. Inspect the linked last heartbeat event and its gateway receipt time. An empty evidence list means no heartbeat was seen in this gateway session; it is not proof of equipment failure.",
+      "citations": [
+        "runbooks/device-offline.md"
+      ]
+    }
+  ],
+  "tools_used": [
+    "get_alert_evidence",
+    "get_device_status",
+    "get_recent_events",
+    "search_runbooks"
+  ],
+  "retrieved": {
+    "alert": {
+      "id": 4,
+      "severity": "high",
+      "device_id": "cooling-03",
+      "rule": "device_offline",
+      "first_observed": 1792745833.044359,
+      "latest_observed": 1792745833.5493205,
+      "event_ids": [
+        29
+      ],
+      "explanation": "No check-in arrived for more than 6 seconds, counting from the last heartbeat or when the app started.",
+      "next_step": "Check whether the demo is running. Then look at the last check-in and the server messages. Silence alone does not tell us the cause.",
+      "active": true
+    },
+    "events": [
+      {
+        "id": 29,
+        "received_at": 1792745826.5409422,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.539497+00:00",
+        "event_type": "heartbeat",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "simulated normal operation"
+      }
+    ],
+    "device_status": {
+      "device_id": "cooling-03",
+      "status": "offline",
+      "last_heartbeat_received_at": 1792745826.5409422,
+      "last_heartbeat_event_id": 29
+    },
+    "recent_events": [
+      {
+        "id": 29,
+        "received_at": 1792745826.5409422,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.539497+00:00",
+        "event_type": "heartbeat",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "simulated normal operation"
+      },
+      {
+        "id": 27,
+        "received_at": 1792745826.5285215,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.521093+00:00",
+        "event_type": "telemetry",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "pretend sensor reading"
+      },
+      {
+        "id": 26,
+        "received_at": 1792745826.5270767,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.521090+00:00",
+        "event_type": "heartbeat",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "simulated normal operation"
+      },
+      {
+        "id": 18,
+        "received_at": 1792745826.4881198,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.480132+00:00",
+        "event_type": "telemetry",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "pretend sensor reading"
+      },
+      {
+        "id": 17,
+        "received_at": 1792745826.4867465,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.480130+00:00",
+        "event_type": "heartbeat",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "simulated normal operation"
+      },
+      {
+        "id": 12,
+        "received_at": 1792745826.4407575,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.431575+00:00",
+        "event_type": "telemetry",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "pretend sensor reading"
+      },
+      {
+        "id": 11,
+        "received_at": 1792745826.4394057,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.431548+00:00",
+        "event_type": "heartbeat",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "simulated normal operation"
+      },
+      {
+        "id": 6,
+        "received_at": 1792745826.4259381,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.418151+00:00",
+        "event_type": "telemetry",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "pretend sensor reading"
+      },
+      {
+        "id": 5,
+        "received_at": 1792745826.424294,
+        "device_id": "cooling-03",
+        "timestamp": "2026-10-23T08:57:06.418149+00:00",
+        "event_type": "heartbeat",
+        "temperature": 45.0,
+        "vibration": 1.0,
+        "status": "ok",
+        "source_ip": "192.0.2.10",
+        "details": "simulated normal operation"
+      }
+    ],
+    "runbooks": [
+      {
+        "source": "runbooks/device-offline.md",
+        "score": 2,
+        "text": "# Device offline: missing heartbeat\n\nPolicy: heartbeats arrive every 1 second. The gateway declares a device offline\nafter more than 6 seconds without a heartbeat, using gateway receipt time. A new\ngateway process or reset gives every device a 6-second grace period.\n\n1. Check whether the simulator is running and whether the offline scenario is selected.\n2. Inspect the linked last heartbeat event and its gateway receipt time. An empty\n   evidence list means no heartbeat was seen in this gateway session; it is not proof of equipment failure.\n3. Compare other devices' heartbeats and check gateway logs before attributing a cause.\n\nA received heartbeat clears this alert. This demo cannot distinguish a device\nfault from a network outage or a stopped simulator. Do not issue control commands.\n"
+      },
+      {
+        "source": "runbooks/connection-failures.md",
+        "score": 1,
+        "text": "# Connection failures: repeated simulated failures\n\nPolicy: at least 3 connection_failure events for one device within an inclusive\n10-second gateway-receipt window raise a medium-severity alert.\n\n1. Inspect the linked failure events and their receipt times.\n2. Compare heartbeats: the failure event describes a simulated downstream attempt,\n   not the TCP connection that successfully delivered this message.\n3. Check reported details and gateway logs. Do not infer an outage or attack from\n   the counter alone.\n\nThis incident remains latched until a demo reset. It records a threshold crossing,\nnot a claim that failures are still happening. No external connection is attempted.\n"
+      }
+    ]
+  },
+  "limitations": "This answer shows up to three recent messages. All the saved evidence is below. It tells you what was reported, not what caused it. The sender address is not verified. Nothing was changed or fixed automatically."
+}

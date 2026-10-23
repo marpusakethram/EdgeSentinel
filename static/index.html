@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EdgeSentinel · Local incident lab</title><link rel="stylesheet" href="/static/style.css">
+<script src="/static/app.js" defer></script></head>
+<body>
+<header><div><span class="eyebrow">INDUSTRIAL EDGE · SIMULATION LAB</span><h1>EdgeSentinel<span class="dot">●</span></h1>
+<p>Spot a problem. See the messages behind it. Know what to check next.</p></div><span class="local">ON YOUR COMPUTER ONLY</span></header>
+<main>
+<aside class="notice">This is a practice lab. All three machines are pretend. Nothing here connects to or changes real factory equipment.</aside>
+<section class="intro" aria-labelledby="intro-title"><h2 id="intro-title">New here? Try this.</h2>
+<ol><li><strong>Start the machines.</strong> They send an "I'm here" message and a sensor reading every second.</li>
+<li><strong>Make the press run hot.</strong> A warning appears because its temperature goes above the demo limit.</li>
+<li><strong>Click the warning, then Explain this alert.</strong> See what happened, which messages prove it, and what to check.</li></ol>
+<p>No networking knowledge needed. <a href="/static/guide.html">Read the simple walkthrough</a>.</p></section>
+<section aria-labelledby="controls-title"><div class="section-heading"><h2 id="controls-title">1. Pick something to try</h2><span id="sim-status">Machines are stopped</span></div>
+<div class="controls"><button data-scenario="normal" class="primary">▶ Start / return to normal</button><button data-scenario="offline">Make cooling go quiet</button>
+<button data-scenario="telemetry">Make the press run hot</button><button data-scenario="failures">Report failed connections</button><button data-scenario="control">Report an unapproved write</button>
+<button id="reset" class="danger">Clear demo and stop</button></div><p id="feedback" role="status" aria-live="polite">Start with normal, then try one problem at a time. A quiet machine takes 6 to 7 seconds to flag.</p></section>
+<section aria-label="Device status" id="devices" class="devices"></section>
+<div class="columns"><section><div class="section-heading"><h2>2. Choose an alert</h2><span>Latest 100, including past problems</span></div>
+<p>High and critical are demo priorities. "Saved for review" means a past event still needs a look, not that it is happening now.</p><div id="alerts"><p>No alerts yet.</p></div></section>
+<section id="detail-panel" aria-labelledby="detail-title"><h2 id="detail-title">3. Understand what happened</h2><p id="detail-empty">Click an alert on the left. Its explanation and the messages behind it will appear here.</p>
+<div id="detail"></div><button id="investigate" class="primary" hidden>Explain this alert</button><div id="investigation" aria-live="polite"></div></section></div>
+<section><div class="section-heading"><h2>Messages from the machines</h2><span>Latest 30 messages</span></div>
+<p>A heartbeat means "I'm here." A sensor reading contains temperature and vibration (how much the machine is shaking). These numbers are made up for the demo.</p>
+<div class="table-wrap"><table><thead><tr><th>Message #</th><th>Machine</th><th>What it sent</th><th>Temperature</th><th>Vibration</th><th>Arrived at</th></tr></thead><tbody id="events"></tbody></table></div></section>
+</main><footer>EdgeSentinel · <a href="/static/guide.html">Simple walkthrough</a> · <a href="/docs">API docs for developers</a></footer>
+</body></html>

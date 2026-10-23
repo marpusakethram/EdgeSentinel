@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+<title id="title">How EdgeSentinel turns machine messages into a checked explanation</title>
+<desc id="desc">Three simulated devices send JSON Lines over loopback TCP. The gateway validates and stores events. Four rules create alerts with event IDs. Read-only assistant tools combine these with local runbooks. FastAPI serves a dashboard. Dashboard controls change only the simulator.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#63dfc0" stroke-width="2"/></marker></defs>
+<rect width="1200" height="690" rx="18" fill="#0b1220"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#e5edf8">
+<text x="48" y="52" font-size="13" fill="#63dfc0" letter-spacing="2">EDGESENTINEL / ALL ON YOUR COMPUTER</text>
+<text x="48" y="94" font-size="30" font-weight="bold">From a machine message to an answer you can check</text>
+<text x="48" y="125" font-size="16" fill="#b8c6da">The machines are pretend. The local transport, storage, rules, and UI are real.</text>
+<g fill="#142238" stroke="#354960" stroke-width="1.5">
+<rect x="48" y="175" width="310" height="150" rx="12"/><rect x="445" y="175" width="310" height="150" rx="12"/><rect x="842" y="175" width="310" height="150" rx="12"/>
+<rect x="48" y="415" width="310" height="150" rx="12"/><rect x="445" y="415" width="310" height="150" rx="12"/><rect x="842" y="415" width="310" height="150" rx="12"/>
+</g>
+<g font-size="20" font-weight="bold"><text x="70" y="211">1. Pretend machines</text><text x="467" y="211">2. Check + save messages</text><text x="864" y="211">3. Four simple rules</text><text x="864" y="451">4. Saved alerts</text><text x="467" y="451">5. Read-only helper</text><text x="70" y="451">6. Browser dashboard</text></g>
+<g font-size="16" fill="#b8c6da">
+<text x="70" y="245">press-01 / conveyor-02 / cooling-03</text><text x="70" y="273">Send a check-in and sensor reading</text><text x="70" y="299">You choose the demo problem</text>
+<text x="467" y="245">Check JSON and reject bad input</text><text x="467" y="273">Save accepted messages in SQLite</text><text x="467" y="299">Give each message its own ID</text>
+<text x="864" y="245">Quiet device / high sensor reading</text><text x="864" y="273">Failure reports / unapproved write</text><text x="864" y="299">No ML or real device commands</text>
+<text x="864" y="485">What happened and when</text><text x="864" y="513">Priority and linked message IDs</text><text x="864" y="539">History stays until you clear it</text>
+<text x="467" y="485">Read alerts, device status, messages</text><text x="467" y="513">Find matching local Markdown guides</text><text x="467" y="539">Return a short answer with sources</text>
+<text x="70" y="485">FastAPI + HTML / CSS / JavaScript</text><text x="70" y="513">See devices, messages, and alerts</text><text x="70" y="539">Click an alert to check the evidence</text>
+</g>
+<g fill="none" stroke="#63dfc0" stroke-width="2" marker-end="url(#arrow)"><path d="M358 250 H430"/><path d="M755 250 H827"/><path d="M997 325 V400"/><path d="M842 490 H770"/><path d="M445 490 H373"/><path d="M203 415 V340" stroke-dasharray="5 5"/></g>
+<g font-size="12" fill="#63dfc0"><text x="368" y="232">local TCP</text><text x="764" y="232">checked</text><text x="764" y="248">events</text><text x="1012" y="368">rule crossed</text><text x="758" y="473">evidence</text><text x="370" y="473">answer</text><text x="65" y="370">demo controls only</text></g>
+<rect x="48" y="607" width="1104" height="44" rx="8" fill="#132d2b"/>
+<text x="68" y="635" font-size="15" fill="#8cebd0">No cloud account. No API key. No real PLC connection. The helper reads and explains; it never changes a machine.</text>
+</g></svg>
